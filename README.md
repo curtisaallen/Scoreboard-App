@@ -1,6 +1,6 @@
 # Scoreboard-App
 React / Express Scoreboard App
-![](https://curtisaallen.github.io/Scoreboard-App/bg.png)
+![](https://github.com/curtisaallen/Scoreboard-App/blob/main/bg.png)
 
 ## Tools
 Key tools used in this React project are:
