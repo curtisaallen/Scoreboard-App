@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       body {
+        padding: 2em;
+       }
+       .container {
+         border: 1px solid #cbccce;
+         display: flex;
+         width: 660px;
+         border-radius: 4px;
+       }
+       .container_left {
+         flex: 2;
+         flex-direction: row;
+       }
+       .container_right {
+        padding: 0.7em;
+        border-left: 1px solid #cbccce;
+       }
+       .container_right ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+       }
+       .container_right ul li a {
+        border-radius: 4px;
+        font-weight: 600;
+        font-size: 10px;
+        border: 1px solid #06c;
+        display: block;
+        text-align: center;
+        padding: 10px;
+        text-decoration: none;
+        color: #06c;
+        margin-bottom: 5px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+       }
+       .container_right ul li a:hover {
+        background-color: rgba(0,102,204,0.2);
+        color: rgba(0,102,204,0.88);
+        border: 1px solid #06c;
+       }
+       .container_left_bottom {
+          border-top: 1px solid #cbccce;
+          padding: 6px 10px;
+       }
+       .container_left_bottom p {
+          margin: 0;
+          padding: 0;
+          color: #a5a6a7;
+          font-family:"Roboto","Arial","Helvetica Neue","Helvetica",sans-serif;
+          font-size: 12px;
+          font-weight: 400;
+       }
+       .container_left_top {
+          display: flex;
+       }
+       .score_container {
+          display: flex;
+          flex-direction: column;
+          border-right: 1px solid #cbccce;
+       }
+       .score_container_top ul {
+          list-style: none;
+          margin: 0;
+          padding: 6px 10px;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          border-bottom: 1px solid #cbccce;
+       }
+       .score_container_top ul li {
+        list-style: none;
+        display: inline-block;
+        text-align: center;
+        color: #000000;
+        font-family: "Roboto","Arial","Helvetica Neue","Helvetica",sans-serif;
+        font-size: 12px;
+        font-weight: 400;
+      }
+      .score_container_top ul li.score {
+        width: 18px;
+      }
+      .score_container_top ul li.total {
+        width: 45px;
+        text-align: right;
+      }
+      .score_container_top ul li.date-time {
+        width: 115px;
+        text-align: left;
+      }
+      .score_container_bottom {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .score_container_bottom ul {
+        list-style: none;
+        margin: 0;
+        padding: 6px 10px;
+        display: flex;
+        flex-direction: row;
+     }
+
+      .score_container_bottom ul li.score {
+        width: 18px;
+        font-size: 13px;
+      }
+      .score_container_bottom ul li.total {
+        width: 45px;
+        text-align: right;
+      }
+      .score_container_bottom ul li.date-time {
+        width: 115px;
+        text-align: left;
+      }
+
+      .score_container_bottom ul li.date-time h2 {
+        font-size: 13px;
+        margin: 0;
+      }
+
+      .container_left_top .sb-header {
+        color: #000000;
+        font-family: "Roboto","Arial","Helvetica Neue","Helvetica",sans-serif;
+        font-size: 6px;
+        font-weight: 400;
+      }
+      .container_left_top .sb-header h1 {
+        margin: 0;
+        padding: 6px 10px;
+        border-bottom: 1px solid #cbccce;
+      }
+
+      .sb-content {
+        display: flex;
+        flex-direction: column;
+      }
+      .sb-content .sb-player {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+      }
+      .sb-player-img span {
+        height: 26px;
+        width: 26px;
+        border-radius: 25px;
+        display: block;
+        background-color: #d7dce0;
+      }
+
+      .sb-player-stats h2 {
+        font-size: 13px;
+      }
+
+      .sb-player-stats p {
+        font-size: 10px;
+      }
+      .score_container_player_info {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+      }
+      .sb-player-img {
+        padding: 1em;
+      }
+      .sb-player-stats {
+         flex: 2;
+      }
+    </style>
+</head>
+<body>
+    <div class="container">
+      <div class="container_left">
+        <div class="container_left_top">
+          <div class="score_container">
+            <div class="score_container_top">
+              <ul>
+                <li class="date-time">Final</li>
+                <li class="score">1</li>
+                <li class="score">2</li>
+                <li class="score">3</li>
+                <li class="score">4</li>
+                <li class="total">T</li>
+              </ul>
+            </div>
+            <div class="score_container_bottom">
+              <ul class="away">
+                <li class="date-time">
+                  <h2>
+                    <span class="sb-team-short">Trail Blazers</span>
+                    <span class="sb-team-record">(4-1)</span>
+                  </h2>
+                </li>
+                <li class="score">12</li>
+                <li class="score">29</li>
+                <li class="score">19</li>
+                <li class="score">25</li>
+                <li class="total">
+                    <span>85</span>
+                </li>
+              </ul>
+              <ul class="home">
+                <li class="date-time">
+                  <h2>
+                    <span class="sb-team-short">Knicks</span>
+                    <span class="sb-team-record">(3-2)</span>
+                  </h2>
+                </li>
+                <li class="score">14</li>
+                <li class="score">16</li>
+                <li class="score">16</li>
+                <li class="score">31</li>
+                <li class="total">
+                    <span>77</span>
+                </li>
+              </ul>             
+            </div>
+          </div>
+          <div class="score_container_player_info">
+            <div class="sb-header">
+              <h1>Top Performers</h1>
+            </div>
+            <div class="sb-content">
+
+
+              <div class="sb-player">
+                <div class="sb-player-img">
+                  <span></span>
+                </div>
+                <div class="sb-player-stats">
+                  <h2>
+                    Brandon Williams
+                    <span>POR - PG</span>
+                  </h2>
+                  <p>22 PTS,  3 REB,  5 AST</p>
+                </div>
+              </div>
+
+
+              <div class="sb-player">
+                <div class="sb-player-img">
+                  <span></span>
+                </div>
+                <div class="sb-player-stats">
+                  <h2>
+                    Miles McBride
+                    <span>NY - PG</span>
+                  </h2>
+                  <p>17 PTS, 6 REB, 3 AST</p>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+        <div class="container_left_bottom">
+          <p>NBA Summer League - Final</p>
+        </div>
+      </div>
+      <div class="container_right">
+        <ul>
+            <li>
+                <a href="#">Gamecast</a>
+            </li>
+            <li>
+                <a href="#">Box Score</a>
+            </li>
+            <li>
+                <a href="#">Play-by-play</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+</body>
+</html>
